@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment2">
+
+
+    <fragment
+        android:id="@+id/listFragment2"
+        android:name="com.example.nifttranse.ListFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment" >
+        <action
+            android:id="@+id/action_listFragment2_to_endFragment"
+            app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_listFragment2_to_newDec"
+            app:destination="@id/newDec" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.nifttranse.endFragment"
+        android:label="end_fragment"
+        tools:layout="@layout/end_fragment" >
+        <action
+            android:id="@+id/action_endFragment_to_listFragment2"
+            app:destination="@id/listFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDec"
+        android:name="com.example.nifttranse.newDec"
+        android:label="new_dec_fragment"
+        tools:layout="@layout/new_dec_fragment" >
+        <action
+            android:id="@+id/action_newDec_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+</navigation>
